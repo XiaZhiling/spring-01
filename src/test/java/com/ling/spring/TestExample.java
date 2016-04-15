@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
+import com.ling.spring.test.OneInterface;
+
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestExample extends UnitTestBase {
 
@@ -12,8 +14,9 @@ public class TestExample extends UnitTestBase {
 	}
 
 	@Test
-	public void test(){
-		
+	public void testOneInterface(){
+		OneInterface oneInterface = this.getBean("oneInterface");
+		oneInterface.sayHello("LiDOngHai");
 	}
 	
 
